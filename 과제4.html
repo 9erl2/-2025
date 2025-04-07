@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+    <meta charset="utf-8">
+    <title>돌고래 사이트</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+        body{
+            margin:0px;
+            background-size:cover;
+            background-color: rgb(172, 211, 255);
+        }
+        .menubox{
+            display: flex;
+            justify-content: space-evenly;
+            font-style: rgb(255,255,0);
+        }
+        .topmenu{
+            font-family:"Noto Serif KR", Helvetica, sans-serif;
+            text-align:center;
+            font-weight: 100;
+            font-size:20pt;
+            line-height: 50px;
+            flex-basis: 20%;
+            background-color: rgba(0.0.0);
+        }
+        .topmenu:hover{
+            background-color: rgba(0,0,0,0.1);
+
+        }
+        .submenu{
+            font-size: small;
+            transition: 0.5s;
+            
+        }
+        .submenu:hover {
+            background-color: rgba(0, 174, 255, 0.3);
+        }
+        .menusub{
+            display:none;
+        }
+    </style>
+</head> 
+<body>
+    <script>
+        function showbox(dpname){
+            let box=document.getElementById(dpname);
+            box.style.display= "block";
+        }
+        function hohoClick(){
+            alert("DON'T CLICK HOHO!");
+        }
+    </script>
+    <div class="menubox">
+        <div class="topmenu" onclick="showbox('submenu')">ABOUT
+            <div class="menusub" id="submenu">
+            <div class="submenu">EAT</div>
+            </div>
+        </div>
+        <div class="topmenu" onclick="showbox('submenu2')">OPTION
+            <div class="menusub" id="submenu2">
+            <div class="submenu">TRAVEL</div>
+            <div class="submenu">EAT</div>
+            <div class="submenu">MOVIE</div>
+            </div>
+    </div>
+    <div class="menubox">
+        <div class="topmenu" onclick="showbox('submenu1')">CALLERY
+            <div class="menusub" id="submenu1">
+            <div class="submenu">PHOTO</div>
+            <div class="submenu">DESIGN</div>
+            </div>
+    </div>
+</body>
+<div id="hohobox" onclick="hohoClick()" style="color: rgb(255, 98, 98);"><br>오류나요</div>
+</html>
